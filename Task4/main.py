@@ -1,13 +1,16 @@
+# парсер команд
 def parse_input(user_input):
     cmd, *args = user_input.split()
     cmd = cmd.strip().lower()
     return cmd, *args
 
+# функція додавання контакту
 def add_contact(args, contacts):
     name, phone = args
     contacts[name] = phone
     return f"Contact {name} added."
 
+# функція зміни номера телефону
 def change_contact(args, contacts):
     name, new_phone = args
     if name in contacts:
@@ -16,6 +19,7 @@ def change_contact(args, contacts):
     else:
         return f"Contact {name} not found."
 
+# функція показу номера телефону
 def show_contact(args, contacts):
     name = args[0]
     if name in contacts:
@@ -23,9 +27,11 @@ def show_contact(args, contacts):
     else:
         return f"Contact {name} not found."
 
+# функція виводу всіх контактів
 def all(args,contacts):
     return contacts
 
+# функція main для реалізації всіх виводів
 def main():
     contacts = {}
     print("Welcome to the assistant bot!")

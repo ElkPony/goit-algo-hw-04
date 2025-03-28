@@ -31,6 +31,6 @@ def get_cats_info(path):
         print("Some error happend: {e}")
         return None
         
-        
+# вивід функції        
 cats_info = get_cats_info("D:/Python Cources GoIT/goit-algo-hw-04/Task2/cats_file.txt")
 print(cats_info)
